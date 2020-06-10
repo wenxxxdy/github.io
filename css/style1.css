@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+.navigation {
+    top              : 3%;
+    margin           : 0;
+    display          : flex;
+    position         : fixed;
+    justify-content  : space-around;
+    -webkit-transform: translateY(-50%);
+    transform        : translateY(-50%);
+    z-index          : 1000;
+    height           : 100px;
+    width            : -webkit-fill-available;
+    padding          : 10px 0 0;
+}
+
+.navigation_fixed {
+    background: rgba(52, 52, 52, .6);
+    height    : 53px;
+    position  : fixed;
+    top       : 0;
+
+}
+
+.navigation__nav {
+    display: block;
+}
+
+.navigation__nav ul {
+    display        : flex;
+    align-items    : flex-end;
+    justify-content: flex-end;
+    flex-shrink    : 0;
+    margin         : 0;
+    padding        : 0;
+    list-style     : none;
+}
+
+.navigation__nav a {
+    text-decoration: none;
+}
+
+.navigation__nav a:hover {
+    text-decoration: underline;
+}
+
+.navigation__link {
+    transition    : color .3s ease-out;
+    font-weight   : 500;
+    font-size     : 1.2rem;
+    height        : 48px;
+    line-height   : 48px;
+    display       : inline-block;
+    letter-spacing: 2px;
+    margin-left   : 32px;
+    box-sizing    : border-box;
+    position      : relative;
+    color         : #fff;
+}
+
+.navigation_logo img {
+    max-width  : 210px;
+    left       : 0;
+    padding-top: 4px;
+}
+
+.mv {
+    background-position  : 65% 50%;
+    top                  : 0;
+    left                 : 0;
+    right                : 0;
+    height               : 950px;
+    background-image     : url(/img/forest.jpg);
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    background-attachment: fixed;
+    background-color     : rgb(92, 105, 105);
+}
+
+.effect-fade {
+    opacity   : 0;
+    transform : translate(0, 45px);
+    transition: all 1000ms;
+}
+
+.effect-fade.effect-scroll {
+    opacity  : 1;
+    transform: translate(0, 0);
+}
+
+
+/*  */
+/* .top_contents {
+    background-color: rgba(216, 200, 183, .6);
+
+} */
+
+/*  */
+* {
+    margin  : 0;
+    padding : 0;
+    border  : 0 none;
+    position: relative;
+}
+
+html {
+    background     : url(/img/forest.jpg) no-repeat 50% fixed;
+    background-size: cover;
+    position       : relative;
+    width          : 100%;
+    height         : 100%;
+    font-family    : roboto;
+    font-weight    : 100;
+    overflow-y     : scroll;
+}
+
+body {
+    width     : 100%;
+    min-height: 100%;
+    background: inherit;
+    overflow  : hidden;
+}
+
+article.box_1 {
+    background   : inherit;
+    position     : relative;
+    width        : 60%;
+    margin       : 10vh auto 15vh;
+    border-radius: 15px;
+    border       : 10px solid rgba(255, 255, 255, .15);
+    box-shadow   : 1px 1px 4px rgba(0, 0, 0, .3);
+    z-index      : 5;
+    font-size    : 1.4rem;
+    color        : gray;
+}
+
+article.box_1:before {
+    content       : '';
+    position      : absolute;
+    top           : 0;
+    left          : 0;
+    right         : 0;
+    bottom        : 0;
+    background    : inherit;
+    filter        : blur(5px);
+    -webkit-filter: blur(6px);
+    -moz-filter   : blur(6px);
+    -o-filter     : blur(6px);
+    -ms-filter    : blur(6px);
+    filter        : url(#blur);
+    filter        : progid: DXImageTransform.Microsoft.Blur(PixelRadius='6');
+}
+
+svg {
+    height  : 0;
+    width   : 0;
+    position: absolute;
+}
